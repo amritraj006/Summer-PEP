@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit Raj | Portfolio</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header{
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+
+        nav a:hover{
+            color: #2563eb;
+        }
+
+        #resume{
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        section{
+            padding: 70px 60px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #home{
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .home-content{
+            flex: 1;
+        }
+
+        .home-content h1{
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .home-content h3{
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero-image img{
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .buttons{
+            margin-top: 25px;
+        }
+
+        .buttons a{
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .primary-btn{
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary-btn{
+            border: 1px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .skills-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .project-card{
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card h3{
+            margin-bottom: 10px;
+        }
+
+        .project-card p{
+            margin-bottom: 10px;
+        }
+
+        .project-card a{
+            text-decoration: none;
+            margin-right: 15px;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        #contact p{
+            margin-bottom: 10px;
+        }
+
+        footer{
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:768px){
+
+            header{
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            nav{
+                flex-direction: column;
+            }
+
+            nav ul{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #home{
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-image img{
+                width: 250px;
+                height: 250px;
+            }
+
+            .skills-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Amrit Raj</h2>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="resume">Resume</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+
+            <div class="home-content">
+
+                <h1>Amrit Raj</h1>
+
+                <h3>Full Stack MERN Developer</h3>
+
+                <p>
+                    Full Stack Developer specializing in React.js, Node.js,
+                    Express.js, MongoDB, and AI-powered applications.
+                    Passionate about building scalable web solutions,
+                    e-commerce platforms, and modern user experiences.
+                </p>
+
+                <div class="buttons">
+                    <a href="#projects" class="primary-btn">View Projects</a>
+                    <a href="#contact" class="secondary-btn">Contact Me</a>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEmN0i8R7mJgA/profile-displayphoto-crop_800_800/B56Z0wADluK8AM-/0/1774626820498?e=1783555200&v=beta&t=uJqZkSO9q6U-41Rq29pQ20sijsecDl_ZWS2Gd-rWKaE"
+                    alt="Amrit Raj">
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <h1>About Me</h1>
+
+            <p>
+                I am a Computer Science and Engineering student at Lovely
+                Professional University with a strong interest in Full Stack
+                Development and Artificial Intelligence.
+            </p>
+
+            <br>
+
+            <p>
+                My primary expertise lies in JavaScript, React.js, Node.js,
+                Express.js, MongoDB, MySQL, REST APIs, and modern cloud
+                deployment platforms.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy building real-world products that solve practical
+                problems. My projects include AI-powered career guidance
+                platforms, image-sharing applications, and e-commerce systems.
+            </p>
+
+        </section>
+
+        <section id="skills">
+
+            <h1>Technical Skills</h1>
+
+            <div class="skills-grid">
+
+                <div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Next.js</li>
+                        <li>Laravel</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Docker</li>
+                        <li>Postman</li>
+                        <li>Render</li>
+                        <li>Vercel</li>
+                        <li>Clerk</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="projects">
+
+            <h1>Projects</h1>
+
+            <div class="project-card">
+
+                <h3>Career Guidance Platform for Students</h3>
+
+                <p>
+                    AI-powered career guidance platform that provides
+                    personalized career recommendations, learning roadmaps,
+                    career assessments, interview preparation, and
+                    progress tracking.
+                </p>
+
+                <p>
+                    <strong>Tech Stack:</strong>
+                    React.js, Framer Motion, Node.js, Express.js,
+                    MongoDB, Gemini AI, Clerk, Nodemailer, jsPDF
+                </p>
+
+                <a href="https://career-ai-web.onrender.com/" target="_blank">
+                    Live Demo
+                </a>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Pixel Hub</h3>
+
+                <p>
+                    Image gallery platform where users can upload, view,
+                    like, and manage images. Includes AI image generation
+                    using Pollinations AI.
+                </p>
+
+                <p>
+                    <strong>Tech Stack:</strong>
+                    React.js, Node.js, Express.js, PostgreSQL,
+                    Clerk, Pollinations AI
+                </p>
+
+                <a href="https://pixel-hub.onrender.com/" target="_blank">
+                    Live Demo
+                </a>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Leather Design Software for Small Entrepreneurs</h3>
+
+                <p>
+                    Multi-vendor e-commerce platform where sellers can
+                    design leather products, publish them to a marketplace,
+                    manage orders, and receive payments.
+                </p>
+
+                <p>
+                    <strong>Tech Stack:</strong>
+                    React.js, Node.js, Express.js, MongoDB,
+                    JWT, Cloudinary, Fabric.js, Stripe,
+                    Pollinations AI
+                </p>
+
+                <a href="https://leather-craft-ecommerce.onrender.com/"
+                    target="_blank">
+                    Live Demo
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="education">
+
+            <h1>Education</h1>
+
+            <h3>Lovely Professional University</h3>
+            <p>Computer Science and Engineering</p>
+            <p>CGPA: 7.26</p>
+            <p>2023 - Present | Phagwara, Punjab</p>
+
+            <br>
+
+            <h3>Indian Public School</h3>
+            <p>12th with Science</p>
+            <p>67.8%</p>
+            <p>2022 - 2023 | Purnea, Bihar</p>
+
+            <br>
+
+            <h3>Bijendra Public School</h3>
+            <p>10th with Science</p>
+            <p>77%</p>
+            <p>2020 - 2021 | Purnea, Bihar</p>
+
+        </section>
+
+        <section id="contact">
+
+            <h1>Contact Information</h1>
+
+            <p><strong>Name:</strong> Amrit Raj</p>
+            <p><strong>Phone:</strong> +91 9693625802</p>
+            <p><strong>Email:</strong> amritraj88887@gmail.com</p>
+            <p><strong>Location:</strong> Purnea, Bihar - 854301</p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                linkedin.com/in/amrit-raj
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                github.com/amrit-raj
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Amrit Raj. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
