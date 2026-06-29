@@ -1,26 +1,36 @@
-const button = document.getElementById("button");
+const form = document.getElementById("todoForm");
+const titleInput = document.getElementById("title");
+const desInput = document.getElementById("des");
+const list = document.getElementById("list");
 
-button.addEventListener('click', (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const title = document.getElementById("title").value;
-    const description = document.getElementById("des").value;
 
-    const ol = document.getElementById("list");
+    const title = titleInput.value.trim();
+    const description = desInput.value.trim();
+
+    if (!title || !description) {
+        alert("Title and Description cannot be empty!");
+        return;
+    }
+
     const li = document.createElement("li");
 
-    const p = document.createElement("p");
-    p.innerText = `${title}`;
-    li.appendChild(p);
+    const heading = document.createElement("h3");
+    heading.textContent = title;
 
-    ol.appendChild(li);
+    const para = document.createElement("p");
+    para.textContent = description;
 
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "❌";
 
-    document.getElementById("title").value = " ";
-    document.getElementById("des").value = " ";
+    deleteBtn.addEventListener("click", () => {
+        li.remove();
+    });
 
+    li.append(heading, para, deleteBtn);
+    list.appendChild(li);
 
-    
-
-
-    
-})
+    form.reset(); 
+});
