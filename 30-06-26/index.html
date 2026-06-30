@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Capturing Example</title>
+</head>
+<body>
+
+    <!-- <div id="parent">
+        Parent
+        <button id="child">Click Me</button>
+    </div> -->
+
+    <div id="parent">
+        Parent
+
+        <div id="child">
+            Child
+
+            CHILD
+            <button id="btn">CLICK CHILD</button>
+
+        </div>
+
+    </div>
+    
+
+    <!-- <script>
+        document.getElementById("parent").addEventListener(
+            "click",
+            function () {
+                console.log("Parent Capturing");
+            },
+            true
+        );
+
+        document.getElementById("child").addEventListener(
+            "click",
+            function () {
+                console.log("Child Capturing");
+            },
+            true
+        );
+    </script> -->
+
+    <script>
+        document.getElementById("parent").addEventListener("click", function () {
+            console.log("Parent Bubbling");
+        });
+
+        document.getElementById("child").addEventListener("click", function () {
+            console.log("Child Bubbling");
+        });
+
+        document.getElementById("btn").addEventListener("click", function () {
+            console.log("Button Bubbling");
+        });
+    </script>
+</body>
+</html>
